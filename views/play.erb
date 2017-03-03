@@ -1,7 +1,7 @@
 <h2> <%= @player1_name %> will play against <%= @player2_name %>! </h2>
 (There will be blood...)
 
-<h4> Eva's hit points: 100 </h4>
+<h4> <%= @player1_name %>'s hit points: <%= @player1_hitpoints %> </h4>
 
 <form action = "attack" method =get>
 <input type =submit value =Combat!!!>

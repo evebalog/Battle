@@ -20,12 +20,16 @@ end
 get '/play' do
   @player1_name = $player1.name
   @player2_name = $player2.name
+  @player1_hitpoints = $player1.hitpoints
+  @player2_hitpoints = $player2.hitpoints
   erb(:play)
 end
 
 get '/attack' do
   @player1_name = $player1.name
   @player2_name = $player2.name
+  $player1.attack($player2)
+  @player2_hitpoints = $player2.hitpoints
   erb(:attack)
 end
 
